@@ -1,6 +1,10 @@
 set :application, "awsdemo"
-set :repository,  "https://mattsnyder@github.com/mattsnyder/awsdemo.git"
+set :repository,  "git@github.com/mattsnyder/awsdemo.git"
 set :scm, :git
+
+ssh_options[:forward_agent] = true # use local keys instead of server keys
+set :branch, "master"
+set :deploy_via, :remote_cache # don't perform full clone
 
 set :deploy_to, "/var/www/rails-apps/awsdemo"
 
