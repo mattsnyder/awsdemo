@@ -174,10 +174,19 @@ end
 module Bundler
   ENV_LOADED   = true
   LOCKED_BY    = '0.9.26'
-  FINGERPRINT  = "b2aaa1e8d485b60c3bedf50ee02aca82ef419114"
+  FINGERPRINT  = "12e10f708d4dbd464e67d17c124bc6fd10a6bf5e"
   HOME         = '/Users/dixcom/.bundle/ruby/1.8/bundler'
-  AUTOREQUIRES = {:test=>[["spec", true]], :default=>[["sqlite3", true]]}
+  AUTOREQUIRES = {:test=>[["faker", false], ["rspec", false]], :default=>[["rails", false], ["sqlite3", true]]}
   SPECS        = [
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rake-0.8.7/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rake-0.8.7.gemspec", :name=>"rake"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/activesupport-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/activesupport-2.3.5.gemspec", :name=>"activesupport"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rack-1.0.1.gemspec", :name=>"rack"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/actionpack-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/actionpack-2.3.5.gemspec", :name=>"actionpack"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/actionmailer-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/actionmailer-2.3.5.gemspec", :name=>"actionmailer"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/activerecord-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/activerecord-2.3.5.gemspec", :name=>"activerecord"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/activeresource-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/activeresource-2.3.5.gemspec", :name=>"activeresource"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/faker-0.3.1/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/faker-0.3.1.gemspec", :name=>"faker"},
+        {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rails-2.3.5/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rails-2.3.5.gemspec", :name=>"rails"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/rspec-1.3.0/lib"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/rspec-1.3.0.gemspec", :name=>"rspec"},
         {:load_paths=>["/Library/Ruby/Gems/1.8/gems/sqlite3-ruby-1.2.5/lib", "/Library/Ruby/Gems/1.8/gems/sqlite3-ruby-1.2.5/ext"], :loaded_from=>"/Library/Ruby/Gems/1.8/specifications/sqlite3-ruby-1.2.5.gemspec", :name=>"sqlite3-ruby"},
       ].map do |hash|
