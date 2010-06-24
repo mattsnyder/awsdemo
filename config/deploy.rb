@@ -10,7 +10,7 @@ set :deploy_via, :remote_cache # don't perform full clone
 
 set :deploy_to, "/var/www/rails-apps/awsdemo"
 
-set :use_sudo, true
+set :use_sudo, false
 
 server "184.72.252.0", :app, :web, :db, :primary => true
 
