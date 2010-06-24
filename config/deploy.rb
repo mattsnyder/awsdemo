@@ -1,5 +1,7 @@
+require "config/capistrano_database"
+
 set :application, "awsdemo"
-set :repository,  "git@github.com/mattsnyder/awsdemo.git"
+set :repository,  "git://github.com/mattsnyder/awsdemo.git"
 set :scm, :git
 
 ssh_options[:forward_agent] = true # use local keys instead of server keys
@@ -8,7 +10,7 @@ set :deploy_via, :remote_cache # don't perform full clone
 
 set :deploy_to, "/var/www/rails-apps/awsdemo"
 
-set :use_sudo, true
+set :use_sudo, false
 
 server "184.72.252.0", :app, :web, :db, :primary => true
 
