@@ -1,7 +1,11 @@
 # Be sure to restart your server when you modify this file
+
+
 require "rubygems"
 require "bundler"
+Bundler.require(:default, Rails.env)
 Bundler.setup
+
 
 
 # Specifies gem version of Rails to use when vendor/rails is not present
