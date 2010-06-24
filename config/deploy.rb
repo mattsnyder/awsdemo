@@ -1,4 +1,5 @@
 require "config/capistrano_database"
+require "config/capistrano_bundler"
 
 set :application, "awsdemo"
 set :repository,  "git://github.com/mattsnyder/awsdemo.git"
