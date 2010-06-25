@@ -13,10 +13,10 @@ set :deploy_to, "/var/www/rails-apps/awsdemo"
 
 set :use_sudo, false
 
-server "184.72.252.0", :app, :web, :db, :primary => true
+server "0.0.0.0", :app, :web, :db, :primary => true
 
-ssh_options[:user] = "ubuntu"
-ssh_options[:keys] = [File.join(ENV['HOME'], '.ssh', 'id_apostate-AWS-Key')]
+ssh_options[:user] = "username"
+ssh_options[:keys] = [File.join(ENV['HOME'], '.ssh', 'id_key_name')]
 
 namespace :deploy do
   task :start do ; end
